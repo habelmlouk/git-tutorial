@@ -95,3 +95,7 @@ Squash Soft
 Force push
 -----------
     git push origin +HEAD:BRANCH_NAME
+
+Rebase
+-----------
+    git rebase origin/BRANCH_NAME
