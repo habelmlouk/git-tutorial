@@ -16,6 +16,7 @@ Init & Fetching
     git pull : update the local repository and the working directory
     git pull --all : Fetch all remotes.
     git fetch : update the local repository only
+    git pull --rebase origin BRANCH_NAME : rebase instead of merging remote branch
 
 > After a git fetch, git merge updates the working tree. git pull is
 > equal to fetch + merge
@@ -95,6 +96,11 @@ Squash Soft
 Force push
 -----------
     git push origin +HEAD:BRANCH_NAME
+    git push -f origin BRANCH_NAME
+    git push --force-with-lease origin BRANCH_NAME: don't force if remote branch has changed
+
+Pull after force push
+    git fetch origin && git reset --hard origin/BRANCH_NAME
 
 Rebase
 -----------
