@@ -105,3 +105,13 @@ Pull after force push
 Rebase
 -----------
     git rebase origin/BRANCH_NAME
+
+Delete all local branch
+-----------
+    git branch | grep -v "develop" | xargs git branch -D
+
+Fetch all branches locally
+-----------
+    git branch -r | grep -v '\->' | while read remote; do git branch --track "${remote#origin/}" "$remote"; done
+    git fetch --all
+    git pull --all
