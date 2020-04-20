@@ -105,6 +105,8 @@ Pull after force push
 Rebase
 -----------
     git rebase origin/BRANCH_NAME
+    git rebase origin/BRANCH_NAME --interactive
+    
 
 Delete all local branch
 -----------
